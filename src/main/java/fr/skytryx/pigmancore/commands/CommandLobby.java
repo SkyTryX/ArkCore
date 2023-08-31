@@ -20,7 +20,7 @@ public class CommandLobby implements CommandExecutor {
             ByteArrayDataOutput out = ByteStreams.newDataOutput();
             out.writeUTF("Connect");
             out.writeUTF("lobby");
-            player.sendPluginMessage(Objects.requireNonNull(Bukkit.getPluginManager().getPlugin("LobbySystem")), "BungeeCord", out.toByteArray());
+            player.sendPluginMessage(Objects.requireNonNull(Bukkit.getPluginManager().getPlugin("PigmanCore")), "BungeeCord", out.toByteArray());
             player.sendMessage("§bSending you to Lobby");
         } else return false;
         return true;
