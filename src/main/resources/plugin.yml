@@ -1,0 +1,17 @@
+name: PigmanCore
+version: '${project.version}'
+main: fr.skytryx.pigmancore.PigmanCore
+api-version: '1.20'
+commands:
+  stafftp:
+    description: Command to stafftp (teleport whilst going into spectator mode)
+    permission: survie.staff.stafftp
+    usage: "§3Usage: /stafftp <player>"
+  invsee:
+    description: Command to see the inventory of a specific player
+    permission: survie.staff.invsee
+    usage: "§3Usage: /invsee <player>"
+  lobby:
+    description: Teleport to lobby
+    usage: "§3/lobby"
+    aliases: [ l, hub ]
