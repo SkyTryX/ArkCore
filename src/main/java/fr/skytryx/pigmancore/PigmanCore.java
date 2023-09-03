@@ -20,10 +20,12 @@ public final class PigmanCore extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new InvseeCheck(), this);
 
+        Bukkit.getLogger().info("Le Core a été activé");
     }
 
     @Override
     public void onDisable() {
         this.getServer().getMessenger().unregisterOutgoingPluginChannel(this);
+        Bukkit.getLogger().info("Le Core a été desactivé");
     }
 }

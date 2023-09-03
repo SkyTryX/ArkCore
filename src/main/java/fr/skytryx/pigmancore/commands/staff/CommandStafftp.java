@@ -19,7 +19,7 @@ public class CommandStafftp implements CommandExecutor {
         Player player = (Player) commandSender;
         player.setGameMode(GameMode.SPECTATOR);
         player.teleport(Objects.requireNonNull(Bukkit.getPlayer(strings[0])));
-        player.sendMessage("§c[StaffTP] §bYou were §6staff-teleported §bto §6"+strings[0]);
+        player.sendMessage("§c[StaffTP] §bTu as été §6téléporté §bà §6"+strings[0]);
         return true;
     }
 }

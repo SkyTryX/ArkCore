@@ -21,7 +21,7 @@ public class CommandLobby implements CommandExecutor {
             out.writeUTF("Connect");
             out.writeUTF("lobby");
             player.sendPluginMessage(Objects.requireNonNull(Bukkit.getPluginManager().getPlugin("PigmanCore")), "BungeeCord", out.toByteArray());
-            player.sendMessage("§bSending you to Lobby");
+            player.sendMessage("§b§bTu vas rejoindre le serveur §6Lobby");
         } else return false;
         return true;
     }
