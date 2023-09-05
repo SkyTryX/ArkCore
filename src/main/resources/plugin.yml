@@ -13,9 +13,10 @@ commands:
     usage: "§3Usage: /invsee <player>"
   lobby:
     description: Teleport to lobby
-    usage: "§3/lobby"
+    usage: "§3Usage: /lobby"
     aliases: [ l, hub ]
   heal:
     description: heal you or someone
     permission: survie.staff.heal
-    usage: "§3/heal <player>"
+    usage: "§3Usage:  /heal <player>"
+    aliases: [h]
