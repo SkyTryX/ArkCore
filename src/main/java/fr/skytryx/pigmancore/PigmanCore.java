@@ -1,6 +1,7 @@
 package fr.skytryx.pigmancore;
 
 import fr.skytryx.pigmancore.commands.CommandLobby;
+import fr.skytryx.pigmancore.commands.staff.CommandGamemode;
 import fr.skytryx.pigmancore.commands.staff.CommandHeal;
 import fr.skytryx.pigmancore.commands.staff.CommandInvsee;
 import fr.skytryx.pigmancore.commands.staff.CommandStafftp;
@@ -19,6 +20,7 @@ public final class PigmanCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("stafftp")).setExecutor(new CommandStafftp());
         Objects.requireNonNull(getCommand("invsee")).setExecutor(new CommandInvsee());
         Objects.requireNonNull(getCommand("heal")).setExecutor(new CommandHeal());
+        Objects.requireNonNull(getCommand("gamemode")).setExecutor(new CommandGamemode());
 
         getServer().getPluginManager().registerEvents(new InvseeCheck(), this);
 
