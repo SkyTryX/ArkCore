@@ -1,10 +1,7 @@
 package fr.skytryx.pigmancore;
 
 import fr.skytryx.pigmancore.commands.CommandLobby;
-import fr.skytryx.pigmancore.commands.staff.CommandGamemode;
-import fr.skytryx.pigmancore.commands.staff.CommandHeal;
-import fr.skytryx.pigmancore.commands.staff.CommandInvsee;
-import fr.skytryx.pigmancore.commands.staff.CommandStafftp;
+import fr.skytryx.pigmancore.commands.staff.*;
 import fr.skytryx.pigmancore.staff.InvseeCheck;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -21,6 +18,7 @@ public final class PigmanCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("invsee")).setExecutor(new CommandInvsee());
         Objects.requireNonNull(getCommand("heal")).setExecutor(new CommandHeal());
         Objects.requireNonNull(getCommand("gamemode")).setExecutor(new CommandGamemode());
+        Objects.requireNonNull(getCommand("tp2p")).setExecutor(new CommandeTP2P());
 
         getServer().getPluginManager().registerEvents(new InvseeCheck(), this);
 
