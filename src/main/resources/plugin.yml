@@ -25,3 +25,8 @@ commands:
     permission: survie.staff.gamemode
     usage: "§3Usage:  /gamemode <0,1,2,3>"
     aliases: [ g ]
+  tp2p :
+    description: Tp toi a un autre joueur
+    permission: survie.staff.tp2p
+    usage: "§3Usage:  /tp2p <player>"
+    aliases: [ tp2p ]
