@@ -12,47 +12,32 @@ public class CommandGamemode implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
-       if(!(commandSender instanceof Player || strings.length ==0)) return false;
-       if (Bukkit.getPlayer(strings[0]) ==null) return false;
-       switch (strings.length){
-           case 0:{
-               Player player = (Player) commandSender;
-               player.sendMessage("Veuillez specifier le gamemode demandé");
-               break;
+       if(!(commandSender instanceof Player)) return false;
+       if(strings.length >= 1){
+           Player player = (Player) commandSender;
+           if(strings.length == 2){
+               player = Bukkit.getPlayer(strings[1]);
+               if(player == null) return false;
            }
-           case 1:{
-                Player player = (Player) commandSender;
-                String gamemode = (String) strings[1];
-                switch (gamemode){
-                    case "0":{
-                        //survie
-                        player.setGameMode(GameMode.SURVIVAL);
-                        player.sendMessage("Tu est en gamemode survie!");
-                        break;
-                    }
-                    case "1":{
-                        //creative
-                        player.setGameMode(GameMode.CREATIVE);
-                        player.sendMessage("Tu est en gamemode creatif!");
-                        break;
-                    }
-                    case "2":{
-                        //adventure
-                        player.setGameMode(GameMode.ADVENTURE);
-                        player.sendMessage("Tu est en gamemode aventure!");
-                        break;
-                    }
-                    case "3":{
-                        //spectator
-                        player.setGameMode(GameMode.SPECTATOR);
-                        player.sendMessage("Tu est en gamemode spectateur!");
-                        break;
-                    }
-                }
-                break;
+           switch (strings[0]){
+               case "0":
+                   player.setGameMode(GameMode.SURVIVAL);
+                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6SURVIE");
+                   return true;
+               case "1":
+                   player.setGameMode(GameMode.CREATIVE);
+                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6CREATIF");
+                   return true;
+               case "2":
+                   player.setGameMode(GameMode.ADVENTURE);
+                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6AVENTURE");
+                   return true;
+               case "3":
+                   player.setGameMode(GameMode.SPECTATOR);
+                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6SPECTATEUR");
+                   return true;
+               }
            }
-       }
-
-        return false;
+       return false;
     }
 }
