@@ -30,3 +30,8 @@ commands:
     permission: survie.staff.tp2p
     usage: "§3Usage:  /tp2p <player>"
     aliases: [ tp2p ]
+  tphere :
+    description: Tp un autre joueur a toi
+    permission: survie.staff.tphere
+    usage: "§3Usage:  /tp2p <player>"
+    aliases: [ tp2p ]
