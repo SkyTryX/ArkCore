@@ -17,12 +17,12 @@ public class CommandFeed implements CommandExecutor {
             Player player = (Player) commandSender;
             player.setSaturation(20);
             player.setFoodLevel(20);
-            player.sendMessage("§c[Heal] §bTu viens de te nourrir.");
+            player.sendMessage("§c[Feed] §bTu viens de te nourrir.");
             return true;
         } else if (strings.length == 1 && Bukkit.getPlayer(strings[0]) != null) {
             Objects.requireNonNull(Bukkit.getPlayer(strings[0])).setFoodLevel(20);
             Objects.requireNonNull(Bukkit.getPlayer(strings[0])).setSaturation(20);
-            commandSender.sendMessage("§c[Heal] §bTu viens de nourrir §6"+  Objects.requireNonNull(Bukkit.getPlayer(strings[0])).getName());
+            commandSender.sendMessage("§c[Feed] §bTu viens de nourrir §6"+  Objects.requireNonNull(Bukkit.getPlayer(strings[0])).getName());
             return true;
         }
         return false;

@@ -12,9 +12,10 @@ public class CommandGamemode implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
-       if(!(commandSender instanceof Player)) return false;
-       if(strings.length >= 1){
-           Player player = (Player) commandSender;
+       if(!(commandSender instanceof Player) && strings.length != 2) return false;
+       Player player = null;
+       if(strings.length == 1 || strings.length == 2){
+           if(strings.length == 1) player = (Player) commandSender;
            if(strings.length == 2){
                player = Bukkit.getPlayer(strings[1]);
                if(player == null) return false;
@@ -22,19 +23,23 @@ public class CommandGamemode implements CommandExecutor {
            switch (strings[0]){
                case "0":
                    player.setGameMode(GameMode.SURVIVAL);
-                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6SURVIE");
+                   if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6SURVIE");
+                   commandSender.sendMessage("§c[GameMode] §6"+player.getName()+"§b est maintenant en gamemode §6SURVIE");
                    return true;
                case "1":
                    player.setGameMode(GameMode.CREATIVE);
-                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6CREATIF");
+                   if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6CREATIF");
+                   commandSender.sendMessage("§c[GameMode] §6"+player.getName()+"§b est maintenant en gamemode §6CREATIF");
                    return true;
                case "2":
                    player.setGameMode(GameMode.ADVENTURE);
-                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6AVENTURE");
+                   if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6ADVENTURE");
+                   commandSender.sendMessage("§c[GameMode] §6"+player.getName()+"§b est maintenant en gamemode §6AVENTURE");
                    return true;
                case "3":
                    player.setGameMode(GameMode.SPECTATOR);
-                   player.sendMessage("§c[GameMode] §6"+player.getName()+" §b est maintenant en gamemode §6SPECTATEUR");
+                   if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6SPECTATOR");
+                   commandSender.sendMessage("§c[GameMode] §6"+player.getName()+" §best maintenant en gamemode §6SPECTATEUR");
                    return true;
                }
            }
