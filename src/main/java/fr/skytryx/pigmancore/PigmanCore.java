@@ -20,7 +20,7 @@ public final class PigmanCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("gamemode")).setExecutor(new CommandGamemode());
         Objects.requireNonNull(getCommand("tp2p")).setExecutor(new CommandeTP2P());
         Objects.requireNonNull(getCommand("tphere")).setExecutor(new CommandTphere());
-
+        Objects.requireNonNull(getCommand("feed")).setExecutor(new CommandFeed());
         getServer().getPluginManager().registerEvents(new InvseeCheck(), this);
 
         Bukkit.getLogger().info("[PigmanCore] Le Core a été activé");
