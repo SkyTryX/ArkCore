@@ -1,4 +1,4 @@
-package fr.skytryx.pigmancore.commands.staff;
+package fr.skytryx.pigmancore.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -12,20 +12,15 @@ import java.net.ConnectException;
 public class CommandPing implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
-        if (strings.length == 0){
-
-            if (commandSender instanceof Player) {
-                Player player = (Player) commandSender;
-                String ping = String.valueOf(player.getPing());
-                player.sendMessage("Vous avez"+ping+"de ping");
-            }
-        } else if (strings.length ==0 || Bukkit.getPlayer(strings[0])!=null) {
+        if (strings.length == 0 && commandSender instanceof Player){
             Player player = (Player) commandSender;
+            player.sendMessage("§c[Ping] §bVous avez §6"+player.getPing()+" §bms");
+        } else if (strings.length == 1) {
             Player playertarget = Bukkit.getPlayer(strings[0]);
-            String ping = String.valueOf(playertarget.getPing());
-            player.sendMessage("Ce joueur a "+playertarget+ " de ping");
+            if(playertarget == null) return false;
+            commandSender.sendMessage("§c[Ping] §6"+playertarget.getName()+" §ba §6"+playertarget.getPing()+ " §bms");
+            return true;
         }
-
         return false;
     }
 }

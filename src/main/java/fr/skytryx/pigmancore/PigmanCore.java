@@ -1,6 +1,7 @@
 package fr.skytryx.pigmancore;
 
 import fr.skytryx.pigmancore.commands.CommandLobby;
+import fr.skytryx.pigmancore.commands.CommandPing;
 import fr.skytryx.pigmancore.commands.staff.*;
 import fr.skytryx.pigmancore.staff.InvseeCheck;
 import org.bukkit.Bukkit;

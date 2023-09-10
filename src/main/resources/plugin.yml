@@ -18,25 +18,28 @@ commands:
   heal:
     description: heal you or someone
     permission: survie.staff.heal
-    usage: "§3Usage:  /heal <player>"
+    usage: "§3Usage: /heal <player>"
     aliases: [h]
   gamemode:
     description: change ton gamemode
     permission: survie.staff.gamemode
-    usage: "§3Usage:  /gamemode <0,1,2,3>"
-    aliases: [ g ]
-  tp2p :
+    usage: "§3Usage: /gamemode <0,1,2,3>"
+    aliases: [ g, gm ]
+  tp2p:
     description: Tp toi a un autre joueur
     permission: survie.staff.tp2p
-    usage: "§3Usage:  /tp2p <player>"
-    aliases: [ tp2p ]
-  tphere :
+    usage: "§3Usage: /tp2p <player>"
+    aliases: [ tptop, tptoplayer ]
+  tphere:
     description: Tp un autre joueur a toi
     permission: survie.staff.tphere
-    usage: "§3Usage:  /tp2p <player>"
-    aliases: [ tp2p ]
+    usage: "§3Usage: /tp2p <player>"
+    aliases: [ tph ]
+  feed:
+    description: Nourris toi ou un joueur joueur
+    permission: survie.staff.feed
+    usage: "§3Usage: /feed <player>"
+    aliases: [ f ]
   ping :
     description: Recupere ton ping ou celui d'un autre joueur
-    permission: survie.staff.ping
-    usage: "§3Usage:  /ping <player>"
-    aliases: [ ping ]
+    usage: "§3Usage: /ping <player>"
