@@ -35,3 +35,8 @@ commands:
     permission: survie.staff.tphere
     usage: "§3Usage:  /tp2p <player>"
     aliases: [ tp2p ]
+  ping :
+    description: Recupere ton ping ou celui d'un autre joueur
+    permission: survie.staff.ping
+    usage: "§3Usage:  /ping <player>"
+    aliases: [ ping ]

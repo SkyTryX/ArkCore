@@ -22,6 +22,7 @@ public final class PigmanCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("tphere")).setExecutor(new CommandTphere());
         Objects.requireNonNull(getCommand("feed")).setExecutor(new CommandFeed());
         getServer().getPluginManager().registerEvents(new InvseeCheck(), this);
+        Objects.requireNonNull(getCommand("ping")).setExecutor(new CommandPing());
 
         Bukkit.getLogger().info("[PigmanCore] Le Core a été activé");
     }
