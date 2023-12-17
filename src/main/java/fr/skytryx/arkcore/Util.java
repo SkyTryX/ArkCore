@@ -1,4 +1,4 @@
-package fr.skytryx.pigmancore;
+package fr.skytryx.arkcore;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;

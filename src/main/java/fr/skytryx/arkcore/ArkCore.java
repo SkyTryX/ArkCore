@@ -1,15 +1,15 @@
-package fr.skytryx.pigmancore;
+package fr.skytryx.arkcore;
 
-import fr.skytryx.pigmancore.commands.CommandLobby;
-import fr.skytryx.pigmancore.commands.CommandPing;
-import fr.skytryx.pigmancore.commands.staff.*;
-import fr.skytryx.pigmancore.staff.InvseeCheck;
+import fr.skytryx.arkcore.commands.CommandLobby;
+import fr.skytryx.arkcore.commands.CommandPing;
+import fr.skytryx.arkcore.commands.staff.*;
+import fr.skytryx.arkcore.staff.InvseeCheck;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
-public final class PigmanCore extends JavaPlugin {
+public final class ArkCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -25,12 +25,12 @@ public final class PigmanCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new InvseeCheck(), this);
         Objects.requireNonNull(getCommand("ping")).setExecutor(new CommandPing());
 
-        Bukkit.getLogger().info("[PigmanCore] Le Core a été activé");
+        Bukkit.getLogger().info("[ArkCore] Plugin Enabled");
     }
 
     @Override
     public void onDisable() {
         this.getServer().getMessenger().unregisterOutgoingPluginChannel(this);
-        Bukkit.getLogger().info("[PigmanCore] Le Core a été desactivé");
+        Bukkit.getLogger().info("[ArkCore] Plugin Disabled");
     }
 }

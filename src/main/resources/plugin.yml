@@ -1,15 +1,15 @@
-name: PigmanCore
+name: ArkCore
 version: '${project.version}'
-main: fr.skytryx.pigmancore.PigmanCore
+main: fr.skytryx.arkcore.ArkCore
 api-version: '1.20'
 commands:
   stafftp:
     description: Command to stafftp (teleport whilst going into spectator mode)
-    permission: survie.staff.stafftp
+    permission: arkcore.staff.stafftp
     usage: "§3Usage: /stafftp <player>"
   invsee:
     description: Command to see the inventory of a specific player
-    permission: survie.staff.invsee
+    permission: arkcore.staff.invsee
     usage: "§3Usage: /invsee <player>"
   lobby:
     description: Teleport to lobby
@@ -17,27 +17,27 @@ commands:
     aliases: [ l, hub ]
   heal:
     description: heal you or someone
-    permission: survie.staff.heal
+    permission: arkcore.staff.heal
     usage: "§3Usage: /heal <player>"
     aliases: [h]
   gamemode:
     description: change ton gamemode
-    permission: survie.staff.gamemode
+    permission: arkcore.staff.gamemode
     usage: "§3Usage: /gamemode <0,1,2,3>"
     aliases: [ g, gm ]
   tp2p:
     description: Tp toi a un autre joueur
-    permission: survie.staff.tp2p
+    permission: arkcore.staff.tp2p
     usage: "§3Usage: /tp2p <player>"
     aliases: [ tptop, tptoplayer ]
   tphere:
     description: Tp un autre joueur a toi
-    permission: survie.staff.tphere
+    permission: arkcore.staff.tphere
     usage: "§3Usage: /tp2p <player>"
     aliases: [ tph ]
   feed:
     description: Nourris toi ou un joueur joueur
-    permission: survie.staff.feed
+    permission: arkcore.staff.feed
     usage: "§3Usage: /feed <player>"
     aliases: [ f ]
   ping :

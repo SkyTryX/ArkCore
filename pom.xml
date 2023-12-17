@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.skytryx</groupId>
-    <artifactId>PigmanCore</artifactId>
+    <artifactId>ArkCore</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>PigmanCore</name>
+    <name>ArkCore</name>
 
     <properties>
         <java.version>1.8</java.version>

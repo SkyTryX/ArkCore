@@ -1,4 +1,4 @@
-package fr.skytryx.pigmancore.commands.staff;
+package fr.skytryx.arkcore.commands.staff;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;

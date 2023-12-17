@@ -1,4 +1,4 @@
-package fr.skytryx.pigmancore.staff;
+package fr.skytryx.arkcore.staff;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;

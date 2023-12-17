@@ -1,6 +1,6 @@
-package fr.skytryx.pigmancore.commands.staff;
+package fr.skytryx.arkcore.commands.staff;
 
-import fr.skytryx.pigmancore.Util;
+import fr.skytryx.arkcore.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
