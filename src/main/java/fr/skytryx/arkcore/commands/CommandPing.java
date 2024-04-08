@@ -10,9 +10,9 @@ import org.jetbrains.annotations.NotNull;
 public class CommandPing implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
-        if (strings.length == 0 && commandSender instanceof Player){
-            Player player = (Player) commandSender;
+        if (strings.length == 0 && commandSender instanceof Player player){
             player.sendMessage("§c[Ping] §bVous avez §6"+player.getPing()+" §bms");
+            return true;
         } else if (strings.length == 1) {
             Player playertarget = Bukkit.getPlayer(strings[0]);
             if(playertarget == null) return false;
