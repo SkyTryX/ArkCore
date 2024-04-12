@@ -21,22 +21,22 @@ public class CommandGamemode implements CommandExecutor {
                if(player == null) return false;
            }
            switch (strings[0]){
-               case "0":
+               case "0","s","su","survival":
                    player.setGameMode(GameMode.SURVIVAL);
                    if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6SURVIE");
                    commandSender.sendMessage("§c[GameMode] §6"+player.getName()+"§b est maintenant en gamemode §6SURVIE");
                    return true;
-               case "1":
+               case "1","c","creative":
                    player.setGameMode(GameMode.CREATIVE);
                    if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6CREATIF");
                    commandSender.sendMessage("§c[GameMode] §6"+player.getName()+"§b est maintenant en gamemode §6CREATIF");
                    return true;
-               case "2":
+               case "2","a","adventure":
                    player.setGameMode(GameMode.ADVENTURE);
                    if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6ADVENTURE");
                    commandSender.sendMessage("§c[GameMode] §6"+player.getName()+"§b est maintenant en gamemode §6AVENTURE");
                    return true;
-               case "3":
+               case "3","sp","spectator":
                    player.setGameMode(GameMode.SPECTATOR);
                    if(!player.equals(commandSender)) player.sendMessage("§c[GameMode] §bTon gamemode a été changé, tu es maintenant en mode §6SPECTATOR");
                    commandSender.sendMessage("§c[GameMode] §6"+player.getName()+" §best maintenant en gamemode §6SPECTATEUR");
